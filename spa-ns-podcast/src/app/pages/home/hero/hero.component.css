@@ -1,0 +1,35 @@
+.ns-newsletter{
+    background-color: lightgrey;
+    padding: 100px 0;
+}
+.ns-small-text{
+    color: gray ;
+    font-weight: 400;
+    padding: 10px;
+}
+.ns-dash{
+    color: #F13C45;
+    font-size: larger;
+    font-weight: 000;
+}
+.ns-title{
+    font-size: 2.5rem;
+    letter-spacing: normal;
+    padding: 10px;
+}
+
+.list--media{
+    background-color: lightgrey;
+}
+.list--media li {
+    position: relative;
+    display: inline-block;
+    background-color: lightgrey;
+    border-color: lightgrey
+ 
+}
+
+
+.list--media li a img{
+    max-width: 80%;
+}

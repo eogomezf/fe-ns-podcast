@@ -1,0 +1,61 @@
+.container-episodes{
+    background-color: white;
+    position: absolute;
+    z-index: 10;
+    margin-top: -50px;
+    margin-left: 100px;
+    padding: 40px;
+}
+
+.ns-episodes{
+    padding-bottom: 500px;
+}
+
+.espisodes-content{
+    padding: 10px;
+}
+
+.espisodes-list{
+    margin-bottom: 30px;
+}
+.episode-text{
+
+    color: gray ;
+}
+
+.img-episodes{
+    width:150px;
+    height:150px;
+}
+
+img{
+    object-fit: cover;
+    width:100%;
+    height:100%;
+  }
+
+.episode-detail::after{
+
+content: '';
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+right: 0;
+height: 130px;
+width: 0;
+border-right: 1px solid #e1e1e1;
+
+}
+
+.list--link{
+  
+    margin: 0;
+    padding: 5px;
+    list-style: none;
+}
+
+.list--link li {
+    display: block;
+    padding: 10px 0;
+    color: gray ;
+}
