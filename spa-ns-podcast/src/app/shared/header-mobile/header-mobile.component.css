@@ -1,4 +1,4 @@
-.navigation--mobile, .menu--product-categories {
+.navigation--mobile, .menu--mobile {
     display: flex;
     align-items: center;
 }
@@ -26,7 +26,7 @@
     align-items:center ;
 }
 
-.navigation--mobile, .menu--product-categories{
+.navigation--mobile, .menu--mobile{
 
     display: flex;
     align-items: center;
