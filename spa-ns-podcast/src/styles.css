@@ -2,3 +2,47 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.font-main{
+    font-family: 'Poppins', sans-serif !important;
+}
+
+@media (min-width: 1200px){
+    .container {
+        min-width: 1200px;
+    }
+
+    .header--standard{
+        display: block;
+    }
+    
+
+    .header--mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 992px){
+    .container {
+        min-width: 960px;
+    }
+
+}
+
+@media (max-width: 992px){
+  
+     .header--standard{
+        display: none;
+    }
+
+    .header {
+        display: none;
+    }
+  
+    .header--mobile {
+        display: block;
+    }
+
+ 
+}
+

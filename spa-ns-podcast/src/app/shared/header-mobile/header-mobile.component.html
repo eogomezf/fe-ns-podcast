@@ -1,0 +1,44 @@
+<header class="header header--mobile font-main" data-sticky="true">
+
+    <div class="navigation--mobile">
+
+        <div class="menu--product-categories">
+
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon>menu</mat-icon>
+              </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon>home</mat-icon>
+                    <span>Home</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>voicemail</mat-icon>
+                    <span>Episode</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>person</mat-icon>
+                    <span>About</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>dialpad</mat-icon>
+                    <span>Blog</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>phone</mat-icon>
+                    <span>Contact</span>
+                </button>
+            </mat-menu>
+            
+        </div><!-- End menu-->
+        <div class="navigation__left text-center"><a class="ns-logo" href="index.html"><img class="logo-movil" src="assets/img/ns-logo-b.png" alt="Evntos"></a></div>
+        <div class="navigation__right">
+            <div class="header__actions">
+                <div class="ps-block--user-header">
+                    <div class="ps-block__left"><a href="#"><mat-icon>person</mat-icon></a></div>
+                    <div class="ps-block__right"><a href="#">Subscribe</a><a href="#">Sing-in</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

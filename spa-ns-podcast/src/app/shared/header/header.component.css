@@ -1,0 +1,65 @@
+.header{
+    background-color:lightgray ;
+    display: block;
+}
+
+.header__content{
+    padding: 20px 0;
+}
+.header__content-left{
+    max-width: 270px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.header__content-center{
+
+    font-size: medium;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.header__content-right{
+
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+
+.ns-logo{
+    margin-right: 30px;
+}
+
+.header__actions {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    position: relative;
+}
+
+img{
+max-width: 100%;
+}
+
+@media (max-width: 992px){
+  
+    .header--standard{
+       display: none;
+   }
+
+   .header {
+       display: none;
+   }
+
+}
