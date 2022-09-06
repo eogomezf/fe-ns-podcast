@@ -21,6 +21,14 @@ img{
     margin-bottom: 20px;
 }
 
+.widget-title{
+    font-size: large;
+}
+
+.footer-text{
+    color: gray;
+}
+
 .list--social{
     margin: 0;
     padding: 0;
@@ -40,7 +48,7 @@ img{
 }
 
 .widget_footer .widget-title {
-    font-size: 18px;
+ 
     margin-bottom: 30px;
     color: #000;
     font-weight: 600;
@@ -79,3 +87,36 @@ a {
     justify-content: center;
     border-top: 1px solid #e1e1e1;
 }
+
+@media screen and (max-width: 1200px) {
+    .widget-title{
+        font-size: smaller;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .widget-title{
+        font-size: smaller;
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+    
+   .footer-text, .list--link li{
+       font-size: 12px !important;
+       padding: 5px 0;
+    }
+
+    
+    .list--social li {
+  
+      margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 780px) {}
+
+@media screen and (max-width: 600px) {}

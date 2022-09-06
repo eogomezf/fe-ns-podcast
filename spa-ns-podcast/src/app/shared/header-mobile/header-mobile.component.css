@@ -1,3 +1,7 @@
+.header--mobile{
+    background-color:lightgray ;
+  
+}
 .navigation--mobile, .menu--mobile {
     display: flex;
     align-items: center;

@@ -1,0 +1,20 @@
+.pict-conatiner{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.gallery-content{
+    margin-bottom: 70px;
+}
+
+.gallery-content img{
+
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+
+.gallery-content img:hover{
+
+    border: 5px solid #ccbebe65;
+}
