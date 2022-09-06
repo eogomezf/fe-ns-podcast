@@ -10,29 +10,31 @@
         </div>
 
         <div class="espisodes-content">
-            <div class="row espisodes-list">
+            <div *ngFor="let podcast of podcasts; let i = index;"            
+            class="row espisodes-list">
                 <div class="img-episodes col-md-3 col-sm-4">
-                    <img src="assets/img/podcast1.jpeg" alt="NicaSource">
+                    <img src="{{podcast.acf.episode.picture.sizes.medium}}" alt="{{podcast.acf.episode.picture.filename}}">
                 </div>
                 <div class="col-md-6 col-7 episode-detail">
-                    <h3 class="episode-title"><strong>dfsafsafdsadf
-                        sadfsadfsdfssdfsadf</strong>
+                    <h3 class="episode-title"><strong>{{podcast.acf.episode.title}}</strong>
                         
                     </h3>
-                    <p  class="episode-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
-                    <button type="button" class="btn btn-outline-danger mr-5">Read More</button>
+                    <p  class="episode-text">{{podcast.acf.episode.content | substr}}</p>
+                    <button type="button" class="btn btn-outline-danger mr-5">{{podcast.acf.episode.button}}</button>
                 </div>
                 <div class="col-md-3 col-sm-1">
                     <aside class="widget-episode">
                         <ul class="list--link">
-                            <li># Season 1</li>
-                            <li># Posted on Sep 3, 2020</li>
-                            <li># audio / goodbyes / life</li>
+                            <li># Season {{podcast.acf.episode.season}}</li>
+                            <li># Posted on {{podcast.acf.episode.date}}</li>
+                            <li># <span *ngFor="let type of types[i]">/ {{type}} </span>
+
+                           </li>
                         </ul>
                     </aside>
                 </div>
             </div>
-            <div class="row espisodes-list">
+            <!-- <div class="row espisodes-list">
                 <div class="img-episodes col-md-3 col-sm-4">
                     <img src="assets/img/podcast1.jpeg" alt="NicaSource">
                 </div>
@@ -76,7 +78,7 @@
                         </ul>
                     </aside>
                 </div>
-            </div>
+            </div> -->
             <div class="text-center mt-10">
                 
                     <button type="button" class="btn btn-outline-danger mr-5">Show More Episodes</button>

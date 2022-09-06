@@ -1,0 +1,35 @@
+.ns-subscribe {
+    margin-bottom: 70px;
+    }
+    .widget:last-child {
+        border-bottom: none;
+    }
+    .widget {
+        position: relative;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .ps-footer--2 .widget_newletters .form-group--nest {
+        margin-bottom: 30px;
+    }
+    .form-group--nest {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    
+    .form-group--nest input {
+        background-color: lightgray;
+        border-radius: 4px 0 0 4px;
+        border-color: #ccc;
+        border-right: none;
+    }
+    
+    .ps-btn{
+        color: #F13C45;
+    }
+    
+    .btn-subscribe{
+    
+        margin-right: 20px !important;
+    }

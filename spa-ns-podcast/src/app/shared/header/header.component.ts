@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
-import { IPages } from '../../interface/pages.interface'
 
 
 @Component({
@@ -9,10 +8,13 @@ import { IPages } from '../../interface/pages.interface'
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  public PagesModule:IPages[]=[]
 
   pages:any[] = [];
-  posts: any;
+  btnsubscribe:string;
+  btnlogin:string;
+  logourl:string;
+
+
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
@@ -20,13 +22,20 @@ export class HeaderComponent implements OnInit {
     this.dataService.getPages()
     .subscribe(resp => {
 
-      console.log(resp)
       let i;
       for(i in resp){
         this.pages.push(resp[i])
       }
 
-      console.log(this.pages)
+    })
+
+    this.dataService.getPost("header")
+    .subscribe(resp => {
+
+      this.btnsubscribe = resp[0].acf.header.buttonsubscribe;
+      this.btnlogin = resp[0].acf.header.buttonlogin;
+      this.logourl = resp[0].acf.header.logo.url
+
     })
   }
 

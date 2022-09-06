@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-home-blogs',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeBlogsComponent implements OnInit {
 
-  constructor() { }
+  blogs:any[] = [];
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+
+    this.dataService.getPost("blog")
+    .subscribe(resp => {
+
+      let i;
+      for(i in resp){
+        this.blogs.push(resp[i])
+      }
+
+    })
   }
 
 }

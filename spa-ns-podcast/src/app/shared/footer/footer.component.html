@@ -5,18 +5,18 @@
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
                     <div class="footer__content-left" >
                         <a class="ns-logo" href="/"><img
-                            src="assets/img/ns-logo-b.png" alt="NicaSource">
+                            src="{{logo}}" alt="NicaSource">
                         </a>
                     </div>
                     <div>
-                        <p class="footer-text pt-2">loreosdfsadf dfasdfsdfsafdasfdsacvfdfsdf dfsdfsdfsdf</p>
+                        <p class="footer-text pt-2">{{content}}</p>
                     </div>
                     <div>
                         <ul class="list--social">
-                            <li><a class="facebook" href="#"><mat-icon>facebook</mat-icon></a></li>
-                            <li><a class="linkedin" href="#"><mat-icon>facebook</mat-icon></a></li>
-                            <li><a class="instagram" href="#"><mat-icon>facebook</mat-icon></a></li>                            
-                            <li><a class="skype" href="#"><mat-icon>facebook</mat-icon></a></li>
+                            <li><a class="facebook" href="{{facebook}}"><mat-icon>facebook</mat-icon></a></li>
+                            <li><a class="linkedin" href="{{linkedin}}"><mat-icon>home</mat-icon></a></li>
+                            <li><a class="instagram" href="{{instagram}}"><mat-icon>facebook</mat-icon></a></li>                            
+                            <li><a class="skype" href="{{skype}}"><mat-icon>home</mat-icon></a></li>
                             
                         </ul>
                     </div>
@@ -25,10 +25,10 @@
                     <aside class="widget widget_footer">
                         <h4 class="widget-title">Pages</h4>
                         <ul class="list--link">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Episode</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a  href="#">Contact</a></li>
+                            <li *ngFor="let page of pages;">
+                                <a href="{{page.slug}}">{{page.title.rendered}}</a>
+                            </li>
+       
                         </ul>
                     </aside>
                 </div>
@@ -36,10 +36,9 @@
                     <aside class="widget widget_footer">
                         <h4 class="widget-title">Recent Episodes</h4>
                         <ul class="list--link">
-                            <li><a href="#">Episodes 1</a></li>
-                            <li><a href="#">Episodes 2</a></li>
-                            <li><a href="#">Episodes 3</a></li>
-                            <li><a href="#">Episodes 4</a></li>
+                            <li *ngFor="let podcast of podcasts;">
+                                <a href="#">{{podcast.title.rendered}}</a>
+                            </li>
                         </ul>
                     </aside>
                 </div>
@@ -59,7 +58,7 @@
         </div>
         <hr>
         <div class="footer__copyright">
-            <p>© {{anio}} NicaSource. All Rights Reserved</p>
+            <p>© {{anio}} {{rights}}</p>
         </div>
     </div>
 </footer>

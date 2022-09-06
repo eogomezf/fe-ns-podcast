@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-home-episodes',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeEpisodesComponent implements OnInit {
 
-  constructor() { }
+
+  podcasts:any[] = [];
+  types:any[] = [];
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+
+    this.dataService.getPocats()
+    .subscribe(cpt => {
+
+
+      for(let i = 0; i < 3; i++){
+        this.podcasts.push(cpt[i])
+
+        this.types.push((cpt[i].acf.episode.type))
+      }
+
+    })
+
   }
 
 }
+

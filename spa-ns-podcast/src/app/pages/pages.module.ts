@@ -8,6 +8,8 @@ import { HomeEpisodesComponent } from './home/home-episodes/home-episodes.compon
 import { HomeBlogsComponent } from './home/home-blogs/home-blogs.component';
 import { GalleryComponent } from './home/gallery/gallery.component';
 import { SubscribeComponent } from './home/subscribe/subscribe.component';
+import { Error404Component } from './error404/error404.component';
+import { PipesModule } from '../pipes/pipes.modules';
 
 
 
@@ -18,12 +20,14 @@ import { SubscribeComponent } from './home/subscribe/subscribe.component';
     HomeEpisodesComponent,
     HomeBlogsComponent,
     GalleryComponent,
-    SubscribeComponent
+    SubscribeComponent,
+    Error404Component
   ],
   imports: [
     CommonModule,
     SharedModule,
-    MaterialModule
+    MaterialModule,
+    PipesModule
   ]
 })
 export class PagesModule { }

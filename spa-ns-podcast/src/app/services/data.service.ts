@@ -16,4 +16,23 @@ export class DataService {
     //return this.http.get(`https://wpnspodcast.techandmore7.com//wp-json/wp/v2/pages`);
     return this.http.get(`${environment.urlAPIwp}pages`);
   }
+
+  //GET POST
+
+  getPosts(){
+    return this.http.get(`${environment.urlAPIwp}posts`);
+  }
+
+  getPost(post:string){
+    return this.http.get(`${environment.urlAPIwp}posts/?slug=${post}`);
+  }
+
+  //GET PODCASTS
+  getPocats(){
+    return this.http.get(`${environment.urlAPIwp}cpt-podcast`);
+  }
+
+  getPocat(){
+    return this.http.get(`${environment.urlAPIwp}cpt-podcast/?slug=episode-2`);
+  }
 }

@@ -8,48 +8,23 @@
         <div class="blog-content font-main">
 
             <div class="row">
-                <div class="col-sm-4">
+                <div 
+                *ngFor="let blog of blogs"
+                class="col-sm-4">
                   <div class="card">
            
                     <div class="card-body">
                         <div class="card-blog-header">
-                            <span class="blog-author">By Mahedi Hasan</span>  <span class="card-text">Sep 11, 2020</span>
-                            <p class="card-text">NicaSource Radio</p>
+                            <span class="blog-author">{{blog.acf.blog.autor}}</span>  <span class="card-text">{{blog.acf.blog.date}}</span>
+                            <p class="card-text">{{blog.acf.blog.enterprise}}</p>
                         </div>
-                      <h2 class="card-title">Global News Podcast Thai soldier kills many</h2>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      <button type="button" class="btn btn-outline-danger mr-5">Read More</button>
+                      <h2 class="card-title">{{blog.acf.blog.title}}</h2>
+                      <p class="card-text">{{blog.acf.blog.content}}</p>
+                      <button type="button" class="btn btn-outline-danger mr-5">{{blog.acf.blog.button}}</button>
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="card">
-           
-                        <div class="card-body">
-                            <div class="card-blog-header">
-                                <span class="blog-author">By Mahedi Hasan</span>  <span class="card-text">Sep 11, 2020</span>
-                                <p class="card-text">NicaSource Radio</p>
-                            </div>
-                          <h2 class="card-title">Global News Podcast Thai soldier kills many</h2>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                          <button type="button" class="btn btn-outline-danger mr-5">Read More</button>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card">
-           
-                        <div class="card-body">
-                            <div class="card-blog-header">
-                                <span class="blog-author">By Mahedi Hasan</span>  <span class="card-text">Sep 11, 2020</span>
-                                <p class="card-text">NicaSource Radio</p>
-                            </div>
-                          <h2 class="card-title">Global News Podcast Thai soldier kills many</h2>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                          <button type="button" class="btn btn-outline-danger mr-5">Read More</button>
-                        </div>
-                      </div>
-                  </div>
+              
               </div>
 
         </div>
