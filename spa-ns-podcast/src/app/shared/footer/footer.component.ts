@@ -48,7 +48,6 @@ export class FooterComponent implements OnInit {
     this.dataService.getPost("footer")
     .subscribe(resp => {
 
-      console.log(resp)
       this.content = resp[0].acf.footer.content;
       this.logo = resp[0].acf.footer.logo.url;
       this.rights = resp[0].acf.footer.rights;
