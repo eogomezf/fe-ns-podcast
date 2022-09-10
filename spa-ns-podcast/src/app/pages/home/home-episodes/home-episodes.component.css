@@ -6,9 +6,11 @@
     margin-left: 100px;
     padding: 40px;
 }
-
+.spinner-grow{
+    color:#F13C45;
+}
 .ns-episodes{
-    padding-bottom: 700px;
+    padding-bottom: 800px;
 }
 
 .espisodes-content{
@@ -67,7 +69,7 @@ border-right: 1px solid #e1e1e1;
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 990px) {
     .container-episodes{
    
         position: absolute;
@@ -83,7 +85,7 @@ border-right: 1px solid #e1e1e1;
     }
 
     .ns-episodes{
-        padding-bottom: 750px;
+        padding-bottom: 820px;
     }
 }
 
@@ -103,21 +105,18 @@ border-right: 1px solid #e1e1e1;
     }
 
     .episode-detail::after{
-
-        content: '';
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 0;
-        height: 130px;
-        width: 0;
         border-right: 1px solid white;
         
         }
 
-        .ns-episodes{
-            padding-bottom: 800px;
-        }
+    .btn-view-all{
+            display:none;
+    }
+
+    .ns-episodes{
+            padding-bottom: 810px;
+    }
+        
 }
 
 @media screen and (max-width: 600px) {
@@ -129,9 +128,19 @@ border-right: 1px solid #e1e1e1;
         margin-left: 0px;
         padding: 40px;
     }
+    
+
+    .title-last, .img-episodes{
+        width:100%;
+    }
+
+    .episode-detail{
+        margin-top: 10px;
+    }
+
 
     
-.ns-episodes{
-    padding-bottom: 40px;
-}
+    .ns-episodes{
+       padding-bottom: 40px;
+    }
 }

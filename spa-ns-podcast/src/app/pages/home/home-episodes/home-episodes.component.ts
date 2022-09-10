@@ -11,10 +11,12 @@ export class HomeEpisodesComponent implements OnInit {
 
   podcasts:any[] = [];
   types:any[] = [];
+  loading:boolean = false;
 
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+
 
     this.dataService.getPocats()
     .subscribe(cpt => {
@@ -25,8 +27,10 @@ export class HomeEpisodesComponent implements OnInit {
 
         this.types.push((cpt[i].acf.episode.type))
       }
-
+      this.loading = true;
     })
+
+    
 
   }
 

@@ -27,6 +27,10 @@ export class DataService {
     return this.http.get(`${environment.urlAPIwp}posts/?slug=${post}`);
   }
 
+  getAnyPost(type:string,post:string){
+    return this.http.get(`${environment.urlAPIwp}posts/?${type}=${post}`);
+  }
+
   //GET PODCASTS
   getPocats(){
     return this.http.get(`${environment.urlAPIwp}cpt-podcast`);

@@ -4,8 +4,8 @@
 
         <div class="menu--mobile">
 
-            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Main Meni">
-                <mat-icon>menu</mat-icon>
+            <button  mat-icon-button [matMenuTriggerFor]="menu" aria-label="Main Meni">
+                <mat-icon class="btn-menu--mobile">menu</mat-icon>
               </button>
             <mat-menu #menu="matMenu">
                 <button *ngFor="let page of pages;" mat-menu-item >                    
@@ -15,14 +15,19 @@
             </mat-menu>
             
         </div>
-        <div class="navigation__left text-center"><a class="ns-logo" href="index.html"><img class="logo-movil" src="assets/img/ns-logo-b.png" alt="Evntos"></a></div>
-        <div class="navigation__right">
-            <div class="header__actions">
-                <div class="ps-block--user-header">
-                    <div class="ps-block__left"><a href="#"><mat-icon>person</mat-icon></a></div>
-                    <div class="ps-block__right"><a href="#">Subscribe</a><a href="#">Sing-in</a></div>
-                </div>
-            </div>
+        <div class="logo-mobil text-center">
+            <a class="ns-logo" href="index.html">
+                <img class="logo-movil" src="assets/img/ns-logo-b.png" alt="Evntos">
+            </a>
         </div>
+            <div class="header__actions">
+                <div class="user-link">
+                    <div class="ps-block__left"><a href="#"><mat-icon>person</mat-icon></a></div>
+                    <div class="ps-block__right">
+                        <a href="#">Subscribe</a>
+                        <a href="#">Sing-in</a>
+                    </div>
+                </div>
+            </div>   
     </div>
 </header>

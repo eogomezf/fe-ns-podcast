@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   btnsubscribe:string;
   btnlogin:string;
   logourl:string;
+  loading:boolean = false;
 
 
   constructor(private dataService: DataService) { }
@@ -35,6 +36,8 @@ export class HeaderComponent implements OnInit {
       this.btnsubscribe = resp[0].acf.header.buttonsubscribe;
       this.btnlogin = resp[0].acf.header.buttonlogin;
       this.logourl = resp[0].acf.header.logo.url
+
+      this.loading = true;
 
     })
   }

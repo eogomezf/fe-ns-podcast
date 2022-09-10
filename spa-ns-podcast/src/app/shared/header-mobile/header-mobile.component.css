@@ -3,11 +3,18 @@
   
 }
 .navigation--mobile, .menu--mobile {
+ 
     display: flex;
     align-items: center;
 }
 
+.btn-menu--mobile{
+
+    font-size: 34px !important;
+}
+
 .header--mobile .navigation--mobile {
+    
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -20,12 +27,12 @@
 
 .logo-movil{
   
-    max-width: 60% !important;
+    max-width: 50% !important;
     align-items: center;
 
 } 
 
-.navigation__left{
+.logo-mobil{
 
     align-items:center ;
 }
@@ -55,24 +62,44 @@
 .header .header__actions > * {
     margin: 0 20px;
 }
-.ps-block--user-header {
+.user-link {
+    
     display: flex;
     flex-flow: row nowrap;
     text-align: left;
+
 }
 
-.ps-block--user-header .ps-block__left {
+.user-link .ps-block__left {
+    font-size: large !important;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+
 }
 
-.ps-block--user-header .ps-block__right {
+.user-link .ps-block__right {
+    font-size: small;
     padding-left: 10px;
+
 }
 
-.ps-block--user-header .ps-block__right a {
+.user-link .ps-block__right a {
     display: block;
     font-weight: 700;
     line-height: 18px;
 }
+
+
+@media screen and (max-width: 900px) {
+
+    .logo-movil{
+  
+        max-width: 50% !important;
+    
+    } 
+}
+
+@media screen and (max-width: 780px) {}
+
+@media screen and (max-width: 600px) {}

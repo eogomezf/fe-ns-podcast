@@ -1,28 +1,32 @@
 <div class="ns-episodes font-main">
     <div class="container container-episodes">
-        <div class="row">
-            <div class="col-7">
+        <div class="row mb-5">
+            <div class="title-last col-md-7 col-xm-8 fadeInLeft">
                 <h2>Lastest Podcast Episodes</h2>
             </div>
-            <div class="col-5 text-right">
+            <div class="btn-view-all col-md-5 col-xm-4 text-right">
                 <button type="button" class="btn btn-danger mr-5">View All</button>
             </div>
         </div>
 
-        <div class="espisodes-content">
+        <div *ngIf="!loading" class="spinner-grow" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        <div *ngIf="loading" class="espisodes-content">
             <div *ngFor="let podcast of podcasts; let i = index;"            
             class="row espisodes-list">
-                <div class="img-episodes col-md-3 col-sm-4">
+                <div class="img-episodes col-md-3 col-sm-4 col-xm-12">
                     <img src="{{podcast.acf.episode.picture.sizes.medium}}" alt="{{podcast.acf.episode.picture.filename}}">
                 </div>
-                <div class="col-md-6 col-7 episode-detail">
+                <div class="episode-detail col-md-6 col-sm-8 col-xm-12">
                     <h3 class="episode-title"><strong>{{podcast.acf.episode.title}}</strong>
                         
                     </h3>
-                    <p  class="episode-text">{{podcast.acf.episode.content | substr}}</p>
+
+                    <div [innerHTML]="podcast.acf.episode.content  | substr"></div>
                     <button type="button" class="btn btn-outline-danger mr-5">{{podcast.acf.episode.button}}</button>
                 </div>
-                <div class="col-md-3 col-sm-1">
+                <div class="col-md-3 ">
                     <aside class="widget-episode">
                         <ul class="list--link">
                             <li># Season {{podcast.acf.episode.season}}</li>
@@ -33,57 +37,11 @@
                         </ul>
                     </aside>
                 </div>
-            </div>
-            <!-- <div class="row espisodes-list">
-                <div class="img-episodes col-md-3 col-sm-4">
-                    <img src="assets/img/podcast1.jpeg" alt="NicaSource">
-                </div>
-                <div class="col-md-6 col-7 episode-detail">
-                    <h3 class="episode-title"><strong>dfsafsafdsadf
-                        sadfsadfsdfssdfsadf</strong>
-                        
-                    </h3>
-                    <p  class="episode-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
-                    <button type="button" class="btn btn-outline-danger mr-5">Read More</button>
-                </div>
-                <div class="col-md-3 col-sm-1">
-                    <aside class="widget-episode">
-                        <ul class="list--link">
-                            <li># Season 1</li>
-                            <li># Posted on Sep 3, 2020</li>
-                            <li># audio / goodbyes / life</li>
-                        </ul>
-                    </aside>
-                </div>
-            </div>
+            </div>         
+        </div>
 
-            <div class="row espisodes-list">
-                <div class="img-episodes col-md-3 col-sm-4">
-                    <img src="assets/img/podcast1.jpeg" alt="NicaSource">
-                </div>
-                <div class="col-md-6 col-7 episode-detail">
-                    <h3 class="episode-title"><strong>dfsafsafdsadf
-                        sadfsadfsdfssdfsadf</strong>
-                        
-                    </h3>
-                    <p  class="episode-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
-                    <button type="button" class="btn btn-outline-danger mr-5">Read More</button>
-                </div>
-                <div class="col-md-3 col-sm-1">
-                    <aside class="widget-episode">
-                        <ul class="list--link">
-                            <li># Season 1</li>
-                            <li># Posted on Sep 3, 2020</li>
-                            <li># audio / goodbyes / life</li>
-                        </ul>
-                    </aside>
-                </div>
-            </div> -->
-            <div class="text-center mt-10">
-                
-                    <button type="button" class="btn btn-outline-danger mr-5">Show More Episodes</button>
-            </div>
-           
+        <div class="text-center mt-10">
+                <button type="button" class="btn btn-outline-danger mr-5">Show More Episodes</button>
         </div>
       
 

@@ -1,10 +1,25 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.css']
+  styleUrls: ['./hero.component.css'],
+  animations: [
+    trigger('slideInLeft', [
+      state('void', style({
+        transform: 'translate3d(-100%, 0, 0)',
+		      visibility: 'visible'
+      })),
+      state('right', style({
+        transform: 'translateZ(0)'
+      })),
+      transition('void => right', [
+        animate(1000)
+      ])  
+    ])
+  ]
 })
 export class HeroComponent implements OnInit {
 
@@ -13,7 +28,7 @@ export class HeroComponent implements OnInit {
   content:string;
   listen:string;
   media:string;
-
+  loading:boolean = false;
 
   constructor(private dataService: DataService) { }
 
@@ -28,6 +43,7 @@ export class HeroComponent implements OnInit {
       this.listen = resp[0].acf.hero.listen;
       this.media = resp[0].acf.hero.media.url;
 
+      this.loading = true;
     })
   }
 

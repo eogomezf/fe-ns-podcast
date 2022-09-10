@@ -1,6 +1,9 @@
 .ns-hero{
     background-color: lightgrey;
-    padding: 100px 0;
+    padding: 80px 0;
+}
+.spinner-grow{
+    color:#F13C45;
 }
 .ns-small-text{
     color: gray ;

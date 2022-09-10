@@ -1,18 +1,16 @@
-.ns-subscribe {
+.ns-error404 {
     margin-bottom: 70px;
-    }
-    .widget:last-child {
-        border-bottom: none;
-    }
-    .widget {
+    margin-top: 100px;
+ }
+.widget:last-child {
+    border-bottom: none;
+}
+.widget {
         position: relative;
         padding-bottom: 20px;
         margin-bottom: 20px;
-    }
+}
     
-    .ps-footer--2 .widget_newletters .form-group--nest {
-        margin-bottom: 30px;
-    }
     .form-group--nest {
         display: flex;
         flex-flow: row nowrap;
