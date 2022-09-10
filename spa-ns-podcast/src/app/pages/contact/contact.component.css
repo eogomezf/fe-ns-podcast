@@ -3,10 +3,6 @@
     background-color: #f1f1f1;
 }
 
-.container {
-    min-width: 1230px;
-}
-
 .ps-breadcrumb .breadcrumb {
     display: inline-block;
     margin: 0;
@@ -83,17 +79,28 @@ textarea {
     font-size: 16px;
     font-weight: 600;
     line-height: 20px;
-    color: #000;
+    color: #fff;
     border: none;
     font-weight: 600;
     border-radius: 4px;
-    background-color: #fcb800;
+    background-color: #0B2342;
     -webkit-transition: all .4s ease;
     transition: all .4s ease;
     cursor: pointer;
 }
 
 .ps-btn:hover, .ps-btn:active, button.ps-btn:hover, button.ps-btn:active {
-    background-color: #222;
+    background-color: #F13C45;
     color: #fff;
 }
+
+@media screen and (max-width: 1200px) {
+
+
+}
+
+@media screen and (max-width: 900px) {}
+
+@media screen and (max-width: 780px) {}
+
+@media screen and (max-width: 600px) {}

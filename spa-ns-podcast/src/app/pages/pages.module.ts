@@ -12,6 +12,7 @@ import { Error404Component } from './error404/error404.component';
 import { PipesModule } from '../pipes/pipes.modules';
 import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -24,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     GalleryComponent,
     SubscribeComponent,
     Error404Component,
-    ContactComponent
+    ContactComponent,
+    AboutComponent
   ],
   imports: [
     CommonModule,
