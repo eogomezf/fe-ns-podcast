@@ -19,6 +19,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSortModule } from '@angular/material/sort';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
+
 
 
 
@@ -26,7 +29,8 @@ import { MatMenuModule } from '@angular/material/menu';
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+   
   ],
   exports: [
     MatSidenavModule,
@@ -47,7 +51,10 @@ import { MatMenuModule } from '@angular/material/menu';
     MatFormFieldModule,
     MatExpansionModule,
     MatNativeDateModule,
-    MatMenuModule
+    MatMenuModule, 
+    MatCarouselModule
+    
+   
   ]
 })
 export class MaterialModule { }

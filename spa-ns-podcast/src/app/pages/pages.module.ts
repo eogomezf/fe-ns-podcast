@@ -10,6 +10,8 @@ import { GalleryComponent } from './home/gallery/gallery.component';
 import { SubscribeComponent } from './home/subscribe/subscribe.component';
 import { Error404Component } from './error404/error404.component';
 import { PipesModule } from '../pipes/pipes.modules';
+import { ContactComponent } from './contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -21,13 +23,16 @@ import { PipesModule } from '../pipes/pipes.modules';
     HomeBlogsComponent,
     GalleryComponent,
     SubscribeComponent,
-    Error404Component
+    Error404Component,
+    ContactComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
     MaterialModule,
-    PipesModule
+    PipesModule,
+    ReactiveFormsModule
+    
   ]
 })
 export class PagesModule { }

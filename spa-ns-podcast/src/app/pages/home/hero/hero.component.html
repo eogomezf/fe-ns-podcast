@@ -8,9 +8,9 @@
         <div *ngIf="loading" class="row">
 
             <div class="col-lg-7 col-md-6 ol-sm-12">
-                <p class="ns-small-text" ><span class="ns-dash" @enterIn>-</span>{{trending}}</p>
+                <p class="ns-small-text" ><span class="ns-dash">-</span>{{trending}}</p>
                 <h1 class="ns-title font-main">{{title}}</h1>
-                <p class="ns-small-text">{{content}}</p>
+                <div class="ns-small-text" [innerHTML]="content"></div>
                 <p class="ns-small-text">{{listen}} <span class="ns-dash">-</span></p>
                 <div class="widget">
                     <ul class="list--media list-group list-group-horizontal">

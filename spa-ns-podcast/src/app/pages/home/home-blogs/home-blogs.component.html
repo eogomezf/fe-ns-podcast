@@ -12,7 +12,7 @@
           </div>
             <div *ngIf="loading" class="row">
                 <div 
-                *ngFor="let blog of blogs"
+                *ngFor="let blog of blogs; let i = index;"
                 class="col-sm-4">
                   <div class="card">
            
@@ -23,7 +23,7 @@
                         </div>
                       <h2 class="card-title">{{blog.acf.blog.title}}</h2>
           
-                      <div [innerHTML]="blog.acf.blog.content  | substr"></div>
+                      <div [innerHTML]="blog.acf.blog.content  | substring:75"></div>
                       <button type="button" class="btn btn-outline-danger mr-5">{{blog.acf.blog.button}}</button>
                     </div>
                   </div>
@@ -34,3 +34,5 @@
         </div>
     </div>
 </div>
+
+

@@ -1,0 +1,93 @@
+
+<div class="ps-breadcrumb">
+
+    <div class="container">
+
+        <ul class="breadcrumb">
+
+            <li><a href="/">Home</a></li>
+
+            <li class="page">Contact Us</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="ps-contact-form">
+    <div class="container">
+        <form 
+        class="ps-form--contact-us needs-validation" 
+        autocomplete="off"
+          [formGroup]="f"
+          (ngSubmit)="Submit()"
+        >
+
+            <h3>Contact us</h3>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
+                    <div class="form-group">
+                        <input 
+                        class="form-control" 
+                        type="text" 
+                        placeholder="Name *"
+                        formControlName="email"
+                        [ngClass]="{'is-invalid': invalidField('email')}"
+                        required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">This field is required.</div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
+                    <div class="form-group">
+                        <input 
+                        class="form-control" 
+                        type="email" 
+                        placeholder="Email *"                       
+                        formControlName="userEmail"
+                        [ngClass]="{'is-invalid': invalidField('userEmail')}"
+                        
+                        required>
+                        <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">This field is required.</div>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                    <div class="form-group">
+                        <input 
+                        class="form-control" 
+                        type="text" 
+                        placeholder="Subject *"
+                        formControlName="subject"
+                        [ngClass]="{'is-invalid': invalidField('subject')}"
+                        
+                        
+                        required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">This field is required.</div>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                    <div class="form-group">
+                        <textarea 
+                        class="form-control" 
+                        rows="5" 
+                        placeholder="Your message"
+                        formControlName="message"
+                        [ngClass]="{'is-invalid': invalidField('message')}"
+                        
+                        required></textarea>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">This field is required.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group submtit">
+
+                <button class="ps-btn ps-btn--fullwidth">Submit</button>
+
+            </div>
+        </form>
+    </div>
+</div>

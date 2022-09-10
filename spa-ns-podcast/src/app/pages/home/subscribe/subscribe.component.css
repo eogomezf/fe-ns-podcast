@@ -1,6 +1,10 @@
 .ns-subscribe {
 margin-bottom: 70px;
 }
+
+.subscribe-form{
+    margin-top:15px !important;
+}
 .widget:last-child {
     border-bottom: none;
 }

@@ -19,8 +19,7 @@ export class HomeBlogsComponent implements OnInit {
     .subscribe(resp => {
 
       console.log(resp)
-      let i;
-      for(i in resp){
+      for(let i = 0; i < 3; i++){
         this.blogs.push(resp[i])
       }
 

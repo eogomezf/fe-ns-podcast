@@ -5,6 +5,9 @@
     align-items: center;
 }
 
+.ns-footer {
+    padding-top: 70px;
+}
 .ns-logo{
     margin-right: 10px;
 }

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 //Customs Modules
@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 
 @NgModule({
@@ -22,11 +23,17 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     SharedModule,
     PagesModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCarouselModule
+    
 
   ],
   exports:[
-    MaterialModule
+    MaterialModule,
+    MatCarouselModule
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [],
   bootstrap: [AppComponent]
