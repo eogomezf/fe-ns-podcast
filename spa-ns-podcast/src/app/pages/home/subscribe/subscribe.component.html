@@ -13,11 +13,26 @@
 
                     <aside class="widget widget_newletters widget_footer">
 
-                        <form class="ps-form--newletter" action="#" method="get">
-                            <div class="form-group--nest">
-                                <input class="form-control" type="text" placeholder="{{email}}">
+                        <form 
+                        class="ps-form--newletter needs-validation" 
+                        autocomplete="off"
+                        [formGroup]="f"
+                         (ngSubmit)="Submit()"
+                         >
+                            <div class="form-group form-group--nest">
+                                <input 
+                                class="form-control" 
+                                type="email" 
+                                placeholder="{{email}}"
+                                formControlName="email"
+                                [ngClass]="{'is-invalid': invalidField('email')}"
+                                required>
                                 <button class="btn-subscribe btn btn-danger mr-5">{{button}} <i class="fa fa-arrow-right"></i></button>
+                               
                             </div>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">This field is required.</div>
+                                
         
                         </form>
                     </aside>

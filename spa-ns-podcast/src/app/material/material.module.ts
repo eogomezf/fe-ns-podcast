@@ -19,8 +19,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSortModule } from '@angular/material/sort';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 
@@ -52,7 +52,8 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     MatExpansionModule,
     MatNativeDateModule,
     MatMenuModule, 
-    MatCarouselModule
+    MatCarouselModule,
+    MatTooltipModule
     
    
   ]

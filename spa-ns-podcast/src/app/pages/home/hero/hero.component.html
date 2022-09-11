@@ -15,15 +15,20 @@
                 <div class="widget">
                     <ul class="list--media list-group list-group-horizontal">
     
-                        <li class="list-group-item"><a href="#"><img src="assets/img/ns-google-podcast.PNG" alt="google-podcast"></a></li>
-                        <li class="list-group-item"><a href="#"><img src="assets/img/ns-apple-podcast.PNG" alt="apple-podcast"></a></li>
-                        <li class="list-group-item"><a href="#"><img class="spotify" src="assets/img/ns-spotify.PNG" alt="spotify"></a></li>
+                        <li class="list-group-item"><a href="https://podcasts.google.com/" target="_blank"><img src="assets/img/ns-google-podcast.PNG" alt="google-podcast"></a></li>
+                        <li class="list-group-item"><a href="https://www.apple.com/la/apple-podcasts/" target="_blank"><img src="assets/img/ns-apple-podcast.PNG" alt="apple-podcast"></a></li>
+                        <li class="list-group-item"><a href="https://podcasters.spotify.com/" target="_blank"><img class="spotify" src="assets/img/ns-spotify.PNG" alt="spotify"></a></li>
 
                     </ul>
                 </div>
             </div>
             <div class="hero-media col-lg-5 col-md-6 col-sm-12">
-                <img src="{{media}}" alt="podcast">
+               <a href="#mypodcast" onclick='mypodcast.play()'>
+                  <img #tooltip="matTooltip"
+                  matTooltip="Click on me!"
+                  src="{{media}}" alt="podcast">
+               </a> 
+                <audio id="mypodcast" src="assets/media/Swimming Lessons - Bail Bonds.mp3" autobuffer ></audio>
             </div>
         </div>
     </div>

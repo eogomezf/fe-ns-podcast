@@ -29,8 +29,8 @@
                   </div>
                 <div *ngIf="loading" class="header__content-right col-4">
                     <div class="header__actions">
-                        <button type="button" class="btn btn-outline-danger mr-5">{{btnsubscribe}}</button>
-                        <button type="button" class="btn btn-outline-danger">{{btnlogin}}</button>
+                        <button type="button"  data-toggle="modal" data-target="#subscriptionModal"  class="btn btn-outline-danger mr-5">{{btnsubscribe}}</button>
+                        <button type="button"  data-toggle="modal" data-target="#signinModal"   class="btn btn-outline-danger">{{btnlogin}}</button>
                     </div>
                     
                 </div>
@@ -44,3 +44,117 @@
     
 </header>
 
+  <!-- Modal -->
+  <div class="modal fade" id="subscriptionModal" tabindex="-1" aria-labelledby="subscriptionModal" aria-hidden="true">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+
+        <div class="modal-header">
+            <h3 class="modal-title">Write your email to subscribe</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+    
+          <div class="modal-body">
+
+            <div class="subscribe-form">
+
+            <aside class="widget widget_newletters widget_footer">
+
+                <form 
+                class="ps-form--newletter needs-validation" 
+                             
+                 (ngSubmit)="Submit()"
+                 >
+                    <div class="form-group form-group--nest">
+                        <input 
+                        class="form-control" 
+                        type="email" 
+                        placeholder="Tyep your email"
+                        formControlName="email"
+                        [ngClass]="{'is-invalid': invalidField('email')}"
+                        required>
+                        <button class="btn-subscribe btn btn-danger mr-5">Subscribe <i class="fa fa-arrow-right"></i></button>
+                       
+                    </div>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">This field is required.</div>
+                        
+
+                </form>
+            </aside>
+        </div>
+          </div>
+        
+  
+      </div>
+    </div>
+  </div>
+
+<div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="signinModal" aria-hidden="true">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h3 class="modal-title">Sign in</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="subscribe-form">
+
+                    <aside class="widget widget_newletters widget_footer">
+
+                        <form class="ps-form--newletter needs-validation" 
+                         autocomplete="off">
+                            <div class="form-group">
+                                <select class="form-control form-login-ybe" formControlName="theCountry"
+                                    [ngClass]="{'is-invalid': invalidField('thecounty')}">
+                                    <option value="">Selecct a country</option>
+                                    <option value="NI">Nicaragua</option>
+                                    <option value="US">United States</option>
+
+
+                                </select>
+                                <span class="invalid-feedback">Selecct a country</span>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control form-login-ybe" placeholder="email"
+                                    formControlName="email" [ngClass]="{'is-invalid': invalidField('email')}" required>
+
+                                <!-- Mensaje de Validación -->
+                                <div class="invalid-feedback">This field is required</div>
+
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="password" class="form-control form-login-ybe" placeholder="password"
+                                    formControlName="password" [ngClass]="{'is-invalid': invalidField('password')}"
+                                    requierd>
+
+                                <!-- Mensaje de Validación -->
+                                <div class="invalid-feedback">This field is required</div>
+
+                            </div>
+                            <div class="row">
+
+                                <!-- /.col -->
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-danger btn-block">Sign-in</button>
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                        </form>
+                    </aside>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

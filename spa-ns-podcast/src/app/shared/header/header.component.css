@@ -59,6 +59,21 @@ img{
 max-width: 100%;
 }
 
+.ps-footer--2 .widget_newletters .form-group--nest {
+    margin-bottom: 30px;
+}
+.form-group--nest {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.form-group--nest input {
+    background-color: lightgray;
+    border-radius: 4px 0 0 4px;
+    border-color: #ccc;
+    border-right: none;
+}
+
 @media (max-width: 992px){
   
     .header--standard{
