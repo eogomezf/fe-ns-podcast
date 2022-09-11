@@ -89,6 +89,12 @@ border-right: 1px solid #e1e1e1;
 
 }
 
+.episode-content{
+
+    text-align: justify;
+
+}
+
 .list--link{
   
     margin: 0;
