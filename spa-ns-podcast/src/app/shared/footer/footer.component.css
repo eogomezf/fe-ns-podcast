@@ -32,6 +32,11 @@ img{
     color: gray;
 }
 
+.social{
+   color: #0B2342;
+   font-size: 24px; 
+}
+
 .list--social{
     margin: 0;
     padding: 0;
@@ -111,6 +116,7 @@ a {
    .footer-text, .list--link li{
        font-size: 12px !important;
        padding: 5px 0;
+       text-align: justify;
     }
 
     
