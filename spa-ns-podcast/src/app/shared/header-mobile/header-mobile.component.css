@@ -44,6 +44,21 @@
 
 }
 
+button.mat-menu-item {
+    width: 100%;
+    list-style: none;
+    display: block;
+
+}
+
+.mat-menu-item a {
+    color:#0B2342 !important;
+}
+
+.mat-menu-item a:hover {
+    color:#F13C45 !important;
+}
+
 .ps-shop__filter-mb{
     margin-top: 0% !important;
 }
