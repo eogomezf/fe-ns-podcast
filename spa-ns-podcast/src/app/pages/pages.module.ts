@@ -13,6 +13,8 @@ import { PipesModule } from '../pipes/pipes.modules';
 import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
+import { EpisodesComponent } from './episodes/episodes.component';
+import { EpisodeComponent } from './episode/episode.component';
 
 
 
@@ -26,7 +28,9 @@ import { AboutComponent } from './about/about.component';
     SubscribeComponent,
     Error404Component,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    EpisodesComponent,
+    EpisodeComponent
   ],
   imports: [
     CommonModule,

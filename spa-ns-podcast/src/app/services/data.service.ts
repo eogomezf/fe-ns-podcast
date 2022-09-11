@@ -36,7 +36,7 @@ export class DataService {
     return this.http.get(`${environment.urlAPIwp}cpt-podcast`);
   }
 
-  getPocat(){
-    return this.http.get(`${environment.urlAPIwp}cpt-podcast/?slug=episode-2`);
+  getPodcast(podcast:string){
+    return this.http.get(`${environment.urlAPIwp}cpt-podcast/?slug=${podcast}`);
   }
 }

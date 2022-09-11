@@ -1,0 +1,175 @@
+.ps-breadcrumb {
+    padding: 20px 0;
+    background-color: #f1f1f1;
+}
+
+.ps-breadcrumb .breadcrumb {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.ps-breadcrumb .breadcrumb li:first-child {
+    padding-left: 0;
+}
+
+.ps-breadcrumb .breadcrumb a {
+    line-height: 20px;
+    color: #09c;
+}
+
+
+
+.ps-breadcrumb .breadcrumb li {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+}
+
+.page:before {
+    content: "/";
+    margin: 0 5px;
+}
+
+
+
+.spinner-grow{
+    color:#F13C45;
+}
+.ns-episodes{
+    padding: 100px 0;
+    background-color: #f6f6f6;
+    padding-bottom: 20px;
+}
+
+.title-last{
+margin-bottom: 90px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    color: #000;
+    line-height: 1em;
+}
+
+.espisodes-content{
+    padding: 10px;
+}
+
+.espisodes-list{
+    margin-bottom: 80px;
+}
+.episode-text{
+
+    color: gray ;
+}
+
+.img-episodes{
+    width:150px;
+    height:150px;
+}
+
+img{
+    object-fit: cover;
+    width:100%;
+    height:100%;
+  }
+
+.episode-detail::after{
+
+content: '';
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+right: 0;
+height: 130px;
+width: 0;
+border-right: 1px solid #e1e1e1;
+
+}
+
+.list--link{
+  
+    margin: 0;
+    padding: 5px;
+    list-style: none;
+}
+
+.list--link li {
+    display: block;
+    padding: 10px 0;
+    color: gray ;
+}
+
+
+
+@media screen and (max-width: 990px) {
+    .container-episodes{
+   
+        position: absolute;
+        z-index: 8;
+        margin-top: -50px;
+        margin-left: 100px;
+        padding: 20px;
+    }
+
+    .list--link li {
+        font-size:12px !important;
+        padding: 5px 0 !important;
+    }
+
+
+}
+
+@media screen and (max-width: 780px) {
+
+    .container-episodes{
+   
+        position: absolute;
+        z-index: 8;
+        margin-top: -50px;
+        margin-left: 70px;
+        padding: 20px;
+    }
+
+    .widget-episode{
+        display: none;
+    }
+
+    .episode-detail::after{
+        border-right: 1px solid white;
+        
+        }
+
+    .btn-view-all{
+            display:none;
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+    .container-episodes{
+        background-color: white;
+        position: relative;
+        z-index: 0;
+        margin-top: 0px;
+        margin-left: 0px;
+        padding: 40px;
+    }
+    
+
+    .title-last, .img-episodes{
+        width:100%;
+    }
+
+    .episode-detail{
+        margin-top: 10px;
+    }
+
+    
+    .ns-episodes{
+       padding-bottom: 40px;
+    }
+}

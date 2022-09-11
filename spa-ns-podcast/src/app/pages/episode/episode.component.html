@@ -1,0 +1,56 @@
+<div class="ps-breadcrumb">
+
+    <div class="container">
+
+        <ul class="breadcrumb">
+
+            <li><a href="/">Home</a></li>
+
+            <li class="page"><a href="episodes">Episodes</a></li>
+
+            <li class="page">Episode</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="ns-episodes font-main">
+    <div class="container container-episodes">
+   
+            <div>
+                <h3  class="title-last">{{mainTitle}}</h3>
+            </div>
+
+
+        <div *ngIf="!loading" class="spinner-grow" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        <div *ngIf="loading" class="espisodes-content">
+            <div          
+            class="row espisodes-list">
+                <div class="img-episodes col-md-3 col-sm-4 col-xm-12">
+                    <img src="{{pic}}" alt="{{picName}}">
+                </div>
+                <div class="episode-detail col-md-6 col-sm-8 col-xm-12">
+                    <h3 class="episode-title"><strong>{{title}}</strong>
+                        
+                    </h3>
+
+                    <div [innerHTML]="content "></div>
+                </div>
+                <div class="col-md-3 ">
+                    <aside class="widget-episode">
+                        <ul class="list--link">
+                            <li># Season {{season}}</li>
+                            <li># Posted on {{date}}</li>
+                            <li># <span *ngFor="let type of types[0]">/ {{type}} </span> </li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>         
+        </div>
+    </div>
+
+</div>

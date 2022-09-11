@@ -1,13 +1,27 @@
+<div class="ps-breadcrumb">
+
+    <div class="container">
+
+        <ul class="breadcrumb">
+
+            <li><a href="/">Home</a></li>
+
+            <li class="page">Episodes</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
 <div class="ns-episodes font-main">
     <div class="container container-episodes">
-        <div class="row mb-5">
-            <div class="title-last col-md-7 col-xm-8 fadeInLeft">
-                <h2>Lastest Podcast Episodes</h2>
+   
+            <div>
+                <h3  class="title-last">Our Podcast Episodes</h3>
             </div>
-            <div class="btn-view-all col-md-5 col-xm-4 text-right">
-                <a href="episodes" role="button" class="btn btn-danger mr-5">View All</a>
-            </div>
-        </div>
+
 
         <div *ngIf="!loading" class="spinner-grow" role="status">
             <span class="sr-only">Loading...</span>
@@ -39,12 +53,6 @@
                 </div>
             </div>         
         </div>
-
-        <div class="text-center mt-10">
-            <a href="episodes" role="button" class="btn btn-outline-danger mr-5">Show More Episodes</a>
-        </div>
-      
-
     </div>
 
 </div>

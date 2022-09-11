@@ -75,9 +75,18 @@
     font-size: 1.3rem;
     --tw-text-opacity: 1;
     color: rgb(0 67 103/var(--tw-text-opacity));
+    text-align: justify;
 }
 
 @media screen and (max-width: 600px) {
+
+    .container-about{
+
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
     .ns-title-a1{
         --tw-text-opacity: 1;
         color: rgb(0 67 103/var(--tw-text-opacity));
@@ -100,5 +109,6 @@
         font-size: 1rem;
         --tw-text-opacity: 1;
         color: rgb(0 67 103/var(--tw-text-opacity));
+        text-align: justify;
     }
 }
