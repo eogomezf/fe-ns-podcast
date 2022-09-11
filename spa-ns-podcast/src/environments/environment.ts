@@ -3,8 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  urlAPIwp: 'http://localhost/wp-ns-podcast/wp-json/wp/v2/',
+  production: true,
+  urlAPIwp: 'https://wpnspodcast.techandmore7.com//wp-json/wp/v2/',
+  //urlAPIwp: 'http://localhost/wp-ns-podcast/wp-json/wp/v2/',
 };
 
 /*
